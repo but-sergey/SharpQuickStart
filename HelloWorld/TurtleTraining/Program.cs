@@ -9,24 +9,69 @@ namespace TurtleTraining
 {
     class Program
     {
+        static void WriteT(int size)
+        {
+            // Буква Т начало
+            Turtle.Angle = 0;
+            Turtle.Move(size);
+            Turtle.Angle = 270;
+            Turtle.Move(size / 3);
+            Turtle.Angle = 90;
+            Turtle.Move(size / 3 * 2);
+            // Буква Т конец
+        }
+        
+        static void WriteO(int size)
+        {
+            // Буква О начало
+            for (int i = 0; i < 4; i++)
+            {
+                Turtle.Move(size);
+                Turtle.TurnRight();
+            }
+            // Буква О конец
+        }
+
+        static void WriteP(int size)
+        {
+            // Буква Р начало
+            Turtle.Angle = 0;
+            Turtle.Move(size);
+            for (int i = 0; i < 3; i++)
+            {
+                Turtle.TurnRight();
+                Turtle.Move(size / 2);
+            }
+            // Буква Р конец
+        }
+
         static void Main(string[] args)
         {
             Turtle.Speed = 9;
-            int i = 0;
-            while (i < 20)
-            {
-                Turtle.Move(20);
-                if((i % 4) == 0 || (i % 4) == 1)
-                {
-                    Turtle.TurnRight();
-                }
-                else
-                {
-                    Turtle.TurnLeft();
-                }
-                i++;
-            }
 
+            // Торт
+
+            Turtle.X = 220;
+            Turtle.Y = 200;
+
+            WriteT(60);
+
+            Turtle.X = 260;
+            Turtle.Y = 200;
+            Turtle.Angle = 0;
+
+            WriteO(30);
+
+            Turtle.X = 340;
+            Turtle.Y = 200;
+            Turtle.Angle = 0;
+
+            WriteP(30);
+
+            Turtle.X = 400;
+            Turtle.Y = 200;
+
+            WriteT(30);
         }
     }
 }
