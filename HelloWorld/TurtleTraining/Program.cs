@@ -13,11 +13,17 @@ namespace TurtleTraining
         {
             Turtle.Speed = 9;
             int i = 0;
-            while (i < 12)
+            while (i < 20)
             {
-                Turtle.Move(100);
-                //Turtle.TurnRight();
-                Turtle.Turn(30);
+                Turtle.Move(20);
+                if((i % 4) == 0 || (i % 4) == 1)
+                {
+                    Turtle.TurnRight();
+                }
+                else
+                {
+                    Turtle.TurnLeft();
+                }
                 i++;
             }
 
