@@ -15,7 +15,7 @@ namespace CinemaAdviser
             String name = Console.ReadLine();
             Console.WriteLine("Здравствуйте, " + name);
 
-            Console.WriteLine("Фильм какого жанра вы бы хотели посмотреть: комедия или драма");
+            Console.WriteLine("Фильм какого жанра вы бы хотели посмотреть: комедия, драма, фантастика");
             String genre = Console.ReadLine();
 
             Console.WriteLine("В таком случае рекомендую посмотреть вам следующие фильмы:");
@@ -27,6 +27,11 @@ namespace CinemaAdviser
                 Console.WriteLine("* Назад в будущее");
                 Console.WriteLine("* В джазе только девушки");
 
+            }
+            else if(genre == "фантастика")
+            {
+                Console.WriteLine("* Люди икс");
+                Console.WriteLine("* Черепашки ниндзя");
             }
             else
             {
