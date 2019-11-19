@@ -24,6 +24,7 @@ namespace TurtleTraining
         static void WriteO(int size)
         {
             // Буква О начало
+            Turtle.Angle = 0;
             for (int i = 0; i < 4; i++)
             {
                 Turtle.Move(size);
@@ -58,13 +59,11 @@ namespace TurtleTraining
 
             Turtle.X = 260;
             Turtle.Y = 200;
-            Turtle.Angle = 0;
 
             WriteO(30);
 
             Turtle.X = 340;
             Turtle.Y = 200;
-            Turtle.Angle = 0;
 
             WriteP(30);
 
